@@ -9,11 +9,14 @@ block content
     div(class="messages-container")
       each message in messages
         div(class='message-container')
-          div(class='text')= message.text
-          div(class='user')= message.user
+          div(class='message-content')
+            span(class='user')= message.user + ":"
+            span(class='text')= message.text
+          
           div(class='date-added')= message.added
-  
-    a(href='/new' class='new-message-link')= "Add a New Message"
+
+    div(class="link-container")
+      a(href='/new' class='new-message-link')= "Add a New Message"
   
   footer
     p(class="attribution")= "Created by David Stockdale"
