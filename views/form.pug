@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1(class="message-input-head")= "Enter Your Message"
+    form(
+        method="POST"
+        action="/new"
+    )
+        div= "Username:"
+        input(class="name-input")
+        div="Message:"
+        input(class='message-input')
+        button(class='submit-button')= "Submit"

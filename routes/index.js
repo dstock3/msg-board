@@ -17,7 +17,12 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'The Message Board', messages: messages });
+  res.render('index', { title: 'A Very Official Message Board', messages: messages });
+});
+
+/* GET new messages */
+router.get('/new', function(req, res, next) {
+  res.render('form');
 });
 
 module.exports = router;

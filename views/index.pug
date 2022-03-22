@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1(class='title')= title
+  p(class='welcome-message') Welcome to #{title}
 
   each message in messages
-    div= message.text
-    div= message.user
-    div= message.added
+    div(class='text')= message.text
+    div(class='user')= message.user
+    div(class='date-added')= message.added
   
