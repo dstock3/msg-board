@@ -10,7 +10,7 @@ block content
       each message in messages
         div(class='message-container')
           div(class='message-content')
-            span(class='user')= message.user + ":"
+            span(class='user')= message.user + ":  "
             span(class='text')= message.text
           
           div(class='date-added')= message.added
