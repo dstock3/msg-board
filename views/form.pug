@@ -2,22 +2,22 @@ extends layout
 
 block content
     header
-        h1(class='title')= title
-        h2(class="message-input-head")= "Enter Your Message"
+        h1(class="message-input-head")= "Enter Your Message"
 
     main
-        form(
-            method="POST"
-            action="/new"
-        )
-            label= "Username:"
-            input(class="name-input" name="name")
-            label="Message:"
-            input(class='message-input' name="msg")
+        form(method="POST" action="/new")
+            div(class="username-container")
+                label= "Username:  "
+                input(class="name-input" name="name")
+
+            div(class="message-input-container")
+                label="Message:  "
+                input(class='message-input' name="msg")
+
             button(class='submit-button')= "Submit"
   
     footer
         p(class="attribution")= "Created by David Stockdale"
         div(class="social-links")
-        a(href='https://github.com/dstock3/msg-board' class="github" target="_blank" rel="noopener noreferrer")= "Github"
-        a(href='https://dstock.biz/' class="portfolio" target="_blank" rel="noopener noreferrer")= "Portfolio"
+            a(href='https://github.com/dstock3/msg-board' class="github" target="_blank" rel="noopener noreferrer")= "Github"
+            a(href='https://dstock.biz/' class="portfolio" target="_blank" rel="noopener noreferrer")= "Portfolio"

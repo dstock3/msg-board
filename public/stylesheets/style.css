@@ -20,6 +20,8 @@ header h1 {
   margin-bottom: 15px;
 }
 
+/* Main */
+
 main {
   display: flex;
   flex-direction: column;
@@ -76,6 +78,38 @@ main {
   text-decoration: none;
   color: #00B7FF;
 }
+
+/* Form */ 
+
+label {
+  color: white;
+}
+
+form {
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+}
+
+.message-input-container {
+  margin-top: 15px;
+}
+
+.submit-button {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00B7FF;
+  font-weight: bold;
+  background-color: rgb(39, 39, 39);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+
+/* Footer */
 
 .attribution {
   margin-top: 15px;
