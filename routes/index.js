@@ -2,16 +2,26 @@ var express = require('express');
 var router = express.Router();
 
 //Sample data
+
+function getCurrentDay() {
+  let today = new Date()
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let date = today.getDate();
+  let newDate = month + "/" + date + "/" + year;
+  return newDate
+}
+
 const messages = [
   {
     text: "Hi there!",
     user: "Amando",
-    added: new Date()
+    added: getCurrentDay()
   },
   {
     text: "Hello World!",
     user: "Charles",
-    added: new Date()
+    added: getCurrentDay()
   }
 ];
 
@@ -27,12 +37,7 @@ router.get('/new', function(req, res, next) {
 
 //Post messages
 router.post('/new', function(req, res, next) {
-  let today = new Date()
-  let year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  let date = today.getDate();
-  let newDate = month + "/" + date + "/" + year;
-  messages.push({text: req.body.msg, user: req.body.name, added: newDate})
+  messages.push({text: req.body.msg, user: req.body.name, added: getCurrentDay()})
 
   res.redirect('/') 
 });
