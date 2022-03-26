@@ -32,7 +32,7 @@ router.get('/', function(req, res, next) {
 
 /* GET new messages */
 router.get('/new', function(req, res, next) {
-  res.render('form');
+  res.render('form', { title: 'A Very Official Message Board' });
 });
 
 //Post messages

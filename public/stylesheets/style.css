@@ -1,7 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: rgb(42,42,42);
-  
+  background: rgb(42,42,42);  
 }
 
 header {
@@ -94,6 +93,13 @@ form {
   margin-top: 15px;
 }
 
+.message-input-head {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .submit-button {
   margin-top: 15px;
   display: flex;
@@ -105,9 +111,8 @@ form {
   padding: 10px;
   border-radius: 5px;
   width: 100%;
+  cursor: pointer;
 }
-
-
 
 /* Footer */
 

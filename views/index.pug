@@ -1,10 +1,6 @@
 extends layout
 
 block content
-  header
-    h1(class='title')= title
-    p(class='welcome-message') Welcome to #{title}
-
   main
     div(class="messages-container")
       each message in messages
@@ -18,9 +14,5 @@ block content
     div(class="link-container")
       a(href='/new' class='new-message-link')= "Add a New Message"
   
-  footer
-    p(class="attribution")= "Created by David Stockdale"
-    div(class="social-links")
-      a(href='https://github.com/dstock3/msg-board' class="github" target="_blank" rel="noopener noreferrer")= "Github"
-      a(href='https://dstock.biz/' class="portfolio" target="_blank" rel="noopener noreferrer")= "Portfolio"
+
   

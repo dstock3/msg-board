@@ -1,11 +1,10 @@
 extends layout
 
 block content
-    header
-        h1(class="message-input-head")= "Enter Your Message"
-
     main
+        
         form(method="POST" action="/new")
+            h2(class="message-input-head")= "Enter Your Message"
             div(class="username-container")
                 label= "Username:  "
                 input(class="name-input" name="name")
@@ -17,9 +16,3 @@ block content
             button(class='submit-button')= "Submit"
         div(class="link-container")
             a(href='/' class='new-message-link')= "Return Home"
-  
-    footer
-        p(class="attribution")= "Created by David Stockdale"
-        div(class="social-links")
-            a(href='https://github.com/dstock3/msg-board' class="github" target="_blank" rel="noopener noreferrer")= "Github"
-            a(href='https://dstock.biz/' class="portfolio" target="_blank" rel="noopener noreferrer")= "Portfolio"
